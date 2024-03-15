@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RadioGroup
+        android:id="@+id/Radios"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radioButtonByte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="on_change_radio"
+            android:text="@string/Byte" />
+
+        <RadioButton
+            android:id="@+id/radioButtonDist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:onClick="on_change_radio"
+            android:text="@string/Dist" />
+
+        <RadioButton
+            android:id="@+id/radioButtonSq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="on_change_radio"
+            android:text="@string/Sq" />
+
+        <RadioButton
+            android:id="@+id/radioButtonVol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="on_change_radio"
+            android:text="@string/Vol" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/FromBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/FromText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/From" />
+
+        <EditText
+            android:id="@+id/FromValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/enter_a_decimal"
+            android:inputType="numberDecimal|numberSigned" />
+
+
+        <Spinner
+            android:id="@+id/FromUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:dropDownWidth="match_parent"
+            android:spinnerMode="dropdown" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ToBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/ToText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/To" />
+
+        <TextView
+            android:id="@+id/ToValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="8dp"
+            android:text="@string/NullValue"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/ToUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:dropDownWidth="match_parent"
+            android:spinnerMode="dropdown" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/BtnBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/ConvertBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="on_convert"
+            android:text="@string/BtnText" />
+    </LinearLayout>
+</LinearLayout>
